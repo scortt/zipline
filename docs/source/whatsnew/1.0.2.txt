@@ -49,6 +49,11 @@ Enhancements
 
 - Add fast stochastic oscillator factor. (:issue:`1255`)
 
+- Add a Dockerfile. (:issue:`1254`)
+
+- New trading calendar which supports sessions which span across midnights, e.g.
+  24 hour 6:01PM-6:00PM sessions for futures trading. (:issue:`1138`)
+
 Bug Fixes
 ~~~~~~~~~
 
@@ -82,6 +87,12 @@ Bug Fixes
 
 - Treat ``schedule_function`` argument as a time rule when a time rule, but no
   date rule is supplied. (:issue:`1221`)
+
+- Protect against boundary conditions at beginning and end trading day in
+  schedule function. (:issue:`1226`)
+
+- Apply adjustments to previous day when using history with a frequency of `1d`.
+  (:issue:`1256`)
 
 Documentation
 ~~~~~~~~~~~~~
