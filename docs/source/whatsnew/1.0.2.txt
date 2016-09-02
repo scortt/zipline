@@ -40,11 +40,6 @@ Enhancements
   metric calculations between pyfolio and zipline. Empyrical adds custom
   annualization options for returns of custom frequencies. (:issue:`855`)
 
-- Add test fixture which sources daily pricing data from minute pricing data
-  fixtures. (:issue:`1243`)
-
-- Performance improvements to blaze core loader. (:issue:`1227`)
-
 - Add Aroon factor. (:issue:`1258`)
 
 - Add fast stochastic oscillator factor. (:issue:`1255`)
@@ -54,6 +49,8 @@ Enhancements
 - New trading calendar which supports sessions which span across midnights, e.g.
   24 hour 6:01PM-6:00PM sessions for futures trading.
   `zipline.utils.tradingcalendar` is now deprecated. (:issue:`1138`)
+
+- Allow slicing a single column out of a Factor/Filter/Classifier. (:issue:`1267`)
 
 Bug Fixes
 ~~~~~~~~~
@@ -95,7 +92,31 @@ Bug Fixes
 - Apply adjustments to previous day when using history with a frequency of `1d`.
   (:issue:`1256`)
 
+- Fail fast on invalid pipeline columns, instead of attempting to access the nonexistent column.
+  (:issue:`1280`)
+
+- Fix ``AverageDollarVolume`` NaN handling. (:issue:`1309`)
+
+
+  Performance
+~~~~~~~~~~~
+
+- Performance improvements to blaze core loader. (:issue:`1227`)
+
+Maintenance and Refactorings
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- Removed remaining mentions of ``add_history``. (:issue:`1287`)
+
 Documentation
 ~~~~~~~~~~~~~
+
+Testing
+~~~~~~~~~~~
+
+- Add test fixture which sources daily pricing data from minute pricing data
+  fixtures. (:issue:`1243`)
+
+
 
 None
