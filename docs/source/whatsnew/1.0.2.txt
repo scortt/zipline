@@ -52,7 +52,8 @@ Enhancements
 - Add a Dockerfile. (:issue:`1254`)
 
 - New trading calendar which supports sessions which span across midnights, e.g.
-  24 hour 6:01PM-6:00PM sessions for futures trading. (:issue:`1138`)
+  24 hour 6:01PM-6:00PM sessions for futures trading.
+  `zipline.utils.tradingcalendar` is now deprecated. (:issue:`1138`)
 
 Bug Fixes
 ~~~~~~~~~
