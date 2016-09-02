@@ -40,6 +40,11 @@ Enhancements
   metric calculations between pyfolio and zipline. Empyrical adds custom
   annualization options for returns of custom frequencies. (:issue:`855`)
 
+- Add test fixture which sources daily pricing data from minute pricing data
+  fixtures. (:issue:`1243`)
+
+- Performance improvements to blaze core loader. (:issue:`1227`)
+
 Bug Fixes
 ~~~~~~~~~
 
@@ -64,6 +69,12 @@ Bug Fixes
   standard deviation of risk adjusted returns. (:issue:`1322`)
 
 - Alpha and sharpe ratio are now annualized. (:issue:`1322`)
+
+- Fix units during reading and writing of daily bar ``first_trading_day ``
+  attribute. (:issue:`1245`)
+
+- Optional dispatch modules, when missing, no longer cause a `NameError`.
+  (:issue:`1246`)
 
 Documentation
 ~~~~~~~~~~~~~
